@@ -1,0 +1,45 @@
+.carousel-item {
+    height: 80vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+  }
+  .carousel-caption {
+    bottom: 200px;
+  }
+  
+  .carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0px;
+  }
+  
+  .carousel-caption p {
+    width: 75%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+  }
+  .button-container {
+    display: flex;
+     /* Add space between buttons */
+     justify-content: space-evenly;
+  }
+  
+  .button1 {
+    
+    width: 200px; /* Adjust width for size */
+    height: 50px; /* Adjust height for size */
+    font-size: 18px; /* Adjust font size */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add button border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  

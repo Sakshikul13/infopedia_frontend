@@ -1,0 +1,19 @@
+<div class="box hover:scale-105 transition-all duration-500 cursor-pointer flex flex-col items-center rounded-lg overflow-hidden w-[15rem] mx-3">
+    <div class="h-[13rem] w-[10rem]">
+        <img class="object-cover object-top w-full h-full" [src]="product.imageUrl" alt="">
+         <!--object-cover doesnt make image shrink img properties will fit the image in the card-->
+    </div>
+    <div class="p-4">
+        <h3 class="font-medium hover:font-semibold text-black-900 text">{{product.brand}}</h3>
+        <p class="mt-2 mb-2 text-black-500">
+            {{product.title}}           
+        </p>
+
+        <div class="flex items-center space-x-2">
+            <div class="text-base font-bold">₹{{product.discountedPrice}}</div>
+            <div class="text-sm text-esm line-through">₹{{product.price}}</div>
+            <div class="text-xs text-black-500">({{product.discountPersent}})</div>
+        </div>
+        
+    </div>
+</div>

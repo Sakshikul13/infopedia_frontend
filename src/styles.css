@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  background: #808080;
+  color: black;
+}
+
+.box {
+  -webkit-box-shadow: #0b0b0b 0px 5px 15px;
+          box-shadow: #0b0b0b 0px 5px 15px;
+  padding: 15px;
+}
+
+.hideScrollbar::-webkit-scrollbar {
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */

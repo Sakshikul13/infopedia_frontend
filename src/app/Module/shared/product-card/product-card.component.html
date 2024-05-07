@@ -1,0 +1,41 @@
+<div (click)="navigate()" class="productCard w-[17rem] m-3 transition-all cursor-pointer">
+     @if(product.badge === 'new') {
+        <div class="badge">New!</div>}
+       <!--   *ngIf="product.badge === 'new'">New!</div> If added new,add this badge -->
+    <div class="h-[20rem]">
+        <img class="w-full h-full object-cover" [src]="product.imageUrl" alt="Product Image">
+    </div>
+    <div class="textRegion p-3 bg-[#0b0b0b]">
+        <div class="product-category">
+            <span >{{product.topLavelCategory}},
+                {{product.secondLavelCategory}}</span>
+        </div>
+        <div class="product-details">
+            <h4><a href="">{{product.brand}}</a></h4>
+            <p><a href="">{{product.title}}</a></p>
+        </div>
+        <div class="flex justify-between items-center">
+            <div>
+                <p class="font-bold text-slate-100">₹{{product.discountedPrice}}</p>
+                <p class="text-slate-100 line-through">₹{{product.price}}</p>
+            </div>
+            
+            <p class="text-green-600">{{product.discountPercent}}% Off</p>
+            <div class="product-links">
+                <a href=""><i class="bi bi-suit-heart"></i></a>
+                @if(product.documentType === 'word' && loggedInAsSeller && isOwner) {
+                    <a href="" (click)="addToFavorites()"><i class="bi bi-pencil-square"></i></a>
+                   } @else {
+                    <div><i class="bi bi-cart-plus"></i></div>
+                   }
+                @if (product.documentType === 'word' && loggedInAsSeller && isOwner) {
+                    <a href=""><i class="bi bi-pencil-square"></i></a>
+                }@else {
+                    <div><i class="bi bi-cart-plus"></i></div>
+                }
+                
+            </div>
+        </div>
+        
+    </div>
+</div>

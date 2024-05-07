@@ -1,0 +1,168 @@
+.nav-item{
+    color: #FF69B4;
+}
+.nav-link{
+    color:#FF69B4 ;
+}
+.open-button{
+    color: #FF69B4;
+}
+header{
+    
+        background-color:#990000;
+        position:fixed;  
+        z-index:1; /*Add this*/
+        width:100%;
+        height:50px;
+        text-align:center;
+        vertical-align:middle;
+        line-height:50px;
+        top:0px;
+      
+}
+.et-hero-tabs-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    z-index: 10;
+    &--top {
+        position: fixed;
+        
+    }
+}
+
+.et-hero-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+		transition: all 0.5s ease;
+		font-size: 0.8rem;
+	  &:hover {
+			color:white;
+      background: #FF69B4;
+			transition: all 0.5s ease;
+    }
+}
+
+// .mybutton{
+// display: inline-block;
+// outline: 0;
+// appearance: none;
+// padding: 0px 12px;
+// border: 0px solid transparent;
+// border-radius: 4px;
+// text-decoration: none;
+// cursor: pointer;
+// background-color: rgb(9, 128, 76);
+// box-shadow: rgb(19 170 82 / 40%) 0px 2px 3px;
+// color: rgb(255, 255, 255);
+// font-size: 14px;
+// font-weight: 400;
+// height: 36px;
+// transition: all 150ms ease-in-out 0s;
+// }
+// .mybutton:hover {
+//     color: rgb(255, 255, 255);
+//     background-color: #FF69B4;
+//     box-shadow: rgb(19 170 82 / 40%) 0px 2px 3px, rgb(195 231 202) 0px 0px 0px 3px;
+// }
+// .search {
+//     width: auto;
+//     height: 40px;
+//     margin-top: 40px;
+//     background: rgba(0,0,0,.2);
+//     border-radius:  3px;
+//     border: 1px solid #fff;
+    
+//     input {
+//       width: auto;
+//       padding: 10px 5px;
+//       float: left;
+//       border: 0;
+//       background: transparent;
+//       border-radius: 3px 0 0 3px;
+//       &:focus {
+//         outline: 0;
+//         background:transparent;
+//       }
+//     }
+    
+//     .searchbutton {
+//       position: relative;
+//       float: right;
+//       border: 0;
+//       padding: 0;
+//       cursor: pointer;
+//       height: 38px;
+//       width: 40px;
+//       color: #fff;
+//       background: transparent;
+//       border-left: 1px solid #fff;
+//       border-radius: 0 3px 3px 0;
+//       &:hover {
+//         background:#FF69B4 ;
+//         color:#444;
+//       }
+//       &:active {
+//         box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+//       }
+//       &:focus {
+//         outline: 0;
+//       }
+//     }  
+//   }
+
+
+.mybutton1{display: inline-block;
+outline: 0;
+text-align: center;
+cursor: pointer;
+padding: 17px 30px;
+border: 0;
+color: #fff;
+font-size: 17.5px;
+border: 2px solid transparent;
+border-color: #000;
+color: #000;
+background: transparent;
+font-weight: 800;
+line-height: 30px;
+transition: background,color .1s ease-in-out;
+}
+.mybutton1:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+.et-hero-tab-slider {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    background: #66B1F1;
+    transition: left 0.3s ease;
+}
+
+@media (min-width: 800px) {
+	.et-hero-tabs,
+	.et-slide {
+    h1 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+	}
+	.et-hero-tab {
+		font-size: 1rem;
+	}
+}

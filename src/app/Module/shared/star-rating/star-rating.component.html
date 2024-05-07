@@ -1,0 +1,6 @@
+@for (star of stars; track star.name) {
+    <span class="star" (click)="rate(star)" [ngClass]="{'active':star<=currentRating}">
+    <mat-icon>{{star<=currentRating?'star':'star_border'}}</mat-icon></span>
+  } @empty {
+    <li> There are no items. </li>
+  }

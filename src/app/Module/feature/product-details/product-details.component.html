@@ -1,0 +1,113 @@
+<div class="p-5 lg:p-10 mt-10">
+    <p class="text-gray-500 py-10">product/worksheets/elementary/math</p>
+    <section class="lg:grid grid-cols-3 lg:gap-10">
+        <div class="col-span-2 flex items-center flex-col">
+            <img src="https://www.worksheets-to-print.com/images/winter-counting-worksheet.jpg" alt="ProductImage">
+
+        </div>
+        <div class="col-span-1 space-y-10 mt-10 lg:mt-0">
+            <div class="space-y-2">
+                <p class="font-semibold text-gray-600 text-lg">Nofilter</p>
+                <p class="text-xl">Men Solid Pure Cotton Straight Kurta</p>
+
+            </div>
+            <div class="flex items-center space-x-5">
+                <p class="text-lg">Rs384</p>
+                <p class="text-lg text-gray-700 line-through">Rs700</p>
+                <p class="text-green-400 font-semibold text-lg">80%</p>
+            </div>
+            <div>
+                <button color="primary" style="padding:1.5rem;" class="button w-full" (click)="handleAddToCart()" mat-raised-button>Add to Cart</button>
+            </div>
+            <div>
+                <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat officiis nemo repudiandae exercitationem ullam autem voluptatum distinctio provident velit corrupti nostrum tempora quasi corporis itaque quis voluptatem id, ex natus!</p>
+                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem provident quasi necessitatibus quidem dignissimos cum delectus molestiae dolor ex at voluptatum rem nostrum beatae magnam nobis est totam, omnis atque.</p>
+            </div>
+        </div>
+
+    </section>
+    <section class="pt-20 pb-10 px-5 lg:px-20">
+
+        <h1 class="font-semibold text-lg pb-4">Review and Ratings</h1>
+        <div class="border border-[#1a1a1a] rounded-md p-5">
+            <div class="lg:grid grid-cols-12 gap-7">
+                <div class="col-span-7">
+                    @for (item of reviews;track item) {
+                        <div class="my-4">
+                            <app-review-card/>
+                        </div>
+                    } 
+                </div>
+                <div class="col-span-5 mt-10 lg:mt-10" >
+                    <div class="box">
+                        <h1 class="text-xl font-semibold pb-1">Product Ratings</h1>
+                        <div class="flex items-center space-x-3 pb-10">
+                            <app-star-rating/>
+                            <p class="text-black-800 opacity-60">200 Ratings</p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="grid grid-cols-12 justify-around items-center">
+                                <div class="col-span-2">
+                                    <span>Excellent</span>
+                                </div>
+                                <div class="col-span-8 px-4">
+                                    <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+
+                                </div>
+                                <div class="col-span-2">
+                                    <span class="opacity-70"></span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="grid grid-cols-12 justify-around items-center">
+                                <div class="col-span-2">
+                                    <span>Average</span>
+                                </div>
+                                <div class="col-span-8 px-4">
+                                    <mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
+
+                                </div>
+                                <div class="col-span-2">
+                                    <span class="opacity-70"></span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="grid grid-cols-12 justify-around items-center">
+                                <div class="col-span-2">
+                                    <span>Not Useful</span>
+                                </div>
+                                <div class="col-span-8 px-4">
+                                    <mat-progress-bar mode="determinate" value="10"></mat-progress-bar>
+
+                                </div>
+                                <div class="col-span-2">
+                                    <span class="opacity-70"></span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-10">
+        <h1 class="py-5 text-gray-400">Related Products</h1>
+       
+            @for (item of relatedProducts; track item.name) {
+               <div>
+                 <app-product-card [product]="item"></app-product-card> <!--need to wrap product in square brackets-->
+               </div>
+              } @empty {
+                <li> There are no items. </li>
+              }
+
+        
+        
+
+    </section>
+</div>

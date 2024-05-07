@@ -1,0 +1,5 @@
+/* Apply scale transformation to the button on hover */
+.button:hover {
+    transform: scale(1.05); /* Increase the size by 5% */
+    transition: transform 0.2s ease; /* Add smooth transition */
+  }
